@@ -22,9 +22,9 @@ The plugin updates the URL fragment when:
 
 The plugin supports the following options:
 
-- duration (milliseconds, default: 500): Scroll animation time.
-- offset (pixels, default: 0): Fixed offset to always consider as the "top of the page" when scrolling; useful for pages with fixed headers. Can be a literal or a function that returns a literal.
-- after (function): Function to execute after scrolling stops after an anchor is clicked. Context will be the clicked anchor. First argument is the fragment being navigated to.
+- `duration` (milliseconds, default: 500): Scroll animation time.
+- `offset` (pixels, default: 0): Fixed offset to always consider as the "top of the page" when scrolling; useful for pages with fixed headers. Can be a literal or a function that returns a literal.
+- `after` (function): Function to execute after scrolling stops after an anchor is clicked. Context will be the clicked anchor. First argument is the fragment being navigated to.
 
 **Quirks**
 
