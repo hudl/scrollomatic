@@ -29,7 +29,7 @@
             var targetOffsetTop = target.offset().top,
                 targetMarginTop = parseInt(target.css('margin-top')),
                 offset = getOffset(),
-                scrollTop = targetOffsetTop - (offset + targetMarginTop);
+                scrollTop = targetOffsetTop - (offset + (isNaN(targetMarginTop) ? 0 : targetMarginTop));
 
             isAutoscrolling = true;
             $('html, body').stop().animate({
