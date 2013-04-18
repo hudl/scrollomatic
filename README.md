@@ -31,3 +31,4 @@ The plugin supports the following options:
 - Links whose href changes after the plugin is initialized won't be updated in the plugin.
 - The plugin should probably only be invoked once per page. This isn't yet enforced by the plugin.
 - The URL will only be modified if the browser supports replaceState. If not, no URL changes will occur.
+- Only supports vertical scrolling.
