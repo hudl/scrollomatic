@@ -3,6 +3,8 @@
 
 jQuery plugin for fragment scrolling with URL manipulation and support for fixed headers.
 
+**[View Demo](http://robhruska.github.io/scrollomatic/scrollomatic-demo.html)**
+
 Scrollomatic can be applied to a set of anchors that navigate to fragments within the page. When an anchor is clicked, the plugin will smooth-scroll to its target and update the URL fragment to the target. Scrollomatic also updates the URL when known targets are visible on the screen.
 
 **Example**
