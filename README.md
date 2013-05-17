@@ -34,3 +34,7 @@ The plugin supports the following options:
 - The plugin should probably only be invoked once per page. This isn't yet enforced by the plugin.
 - The URL will only be modified if the browser supports replaceState. If not, no URL changes will occur.
 - Only supports vertical scrolling.
+
+**Issues**
+
+Feel free to report any issues or enhancements [here on GitHub](https://github.com/robhruska/scrollomatic/issues).
