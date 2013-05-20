@@ -15,9 +15,9 @@
         }
 
         function setUrlHash(hash) {
-            if ('replaceState' in window.history) window.history.replaceState('', '', hash);
+            if ('replaceState' in window.history && window.location.hash !== hash) window.history.replaceState('', '', hash);
         }
-        
+
         function unsetUrlHash() {
             if ('replaceState' in window.history) window.history.replaceState('', document.title, window.location.pathname, window.location.search);
         }
@@ -42,7 +42,7 @@
         }
 
         var targets = [];
-        
+
         this.each(function() {
             var $this = $(this);
 
@@ -60,12 +60,12 @@
             });
         });
 
-        // When scrolling, if we're showing one of the known targets in the viewport, update the 
+        // When scrolling, if we're showing one of the known targets in the viewport, update the
         // URL fragment to reflect that. If multiple targets are visible, show the topmost one.
         // If none are visible or the page is scrolled to the top, unset the fragment.
         function onScroll () {
             if (isAutoscrolling) return;
-            
+
             var topmost,
                 topmostY = 0,
                 offset = getOffset(),
@@ -100,7 +100,7 @@
                 // When the page loads with a fragment, it doesn't account for any fixed headers, resulting
                 // in the page scrolling too far. After a slight delay, explicitly scroll to the target.
                 if (window.location.hash) scrollToHashTarget(window.location.hash, 0, true);
-                
+
                 // Wait a bit to bind the scroll handler in case the page was loaded with a fragment. We don't
                 // want to handle those scroll events.
                 win.scroll(onScroll);
