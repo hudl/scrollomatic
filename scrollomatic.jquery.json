@@ -1,6 +1,6 @@
 {
   "name": "scrollomatic",
-  "version": "0.9.1",
+  "version": "0.9.2",
 
   "title": "scrollomatic",
 	"description": "jQuery plugin for fragment scrolling with URL manipulation and support for fixed headers.",
