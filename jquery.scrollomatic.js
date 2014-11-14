@@ -19,7 +19,7 @@
         }
 
         function unsetUrlHash() {
-            if ('replaceState' in window.history) window.history.replaceState('', document.title, window.location.pathname, window.location.search);
+            if ('replaceState' in window.history) window.history.replaceState('', document.title, window.location.pathname + window.location.search);
         }
 
         function scrollToHashTarget(hash, duration, suppressCallbacks) {
